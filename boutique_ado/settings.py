@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost',  '127.0.0.1:8000', '127.0.0.1', '8000-marcopolo19-boutiqueado-dhh2agtr7ut.ws-eu114.gitpod.io']
+ALLOWED_HOSTS = ['localhost',  '127.0.0.1:8000', '127.0.0.1', '8000-marcopolo19-boutiqueado-8kbejfp1okv.ws-eu114.gitpod.io']
 
 
 # Application definition

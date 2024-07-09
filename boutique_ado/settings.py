@@ -11,7 +11,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from pathlib import Path
 import dj_database_url
+if os.path.isfile('env.py'):import env
+SECRET_KEY = os.environ.get("SECRET_KEY")
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,9 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', ".herokuapp.com",  '127.0.0.1:8000', 'boutique-ado1.herokuapp.com',]
+ALLOWED_HOSTS = ['localhost', ".herokuapp.com",  '127.0.0.1:8000', 'boutique-ado1.herokuapp.com',  '8000-marcopolo19-boutiqueado-6z7ax8x8udh.ws.codeinstitute-ide.net']
 
 
 # Application definition
